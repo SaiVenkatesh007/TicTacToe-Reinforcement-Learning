@@ -134,7 +134,7 @@ class TicTacToe:
             p1_action = self.p1.actionChoice(positions, self.board, self.pSymbol)
             self.updateBoard(p1_action)
             self.displayBoard()
-            winner = self.winner()
+            winner = self.getWinner()
             if winner is not None:
                 if winner == 1:
                     print(self.p1.name, "WON the Game!!!")
