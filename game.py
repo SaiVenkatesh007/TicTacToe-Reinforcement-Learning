@@ -10,7 +10,7 @@ class TicTacToe:
         self.pSymbol = 1
 
     def getHash(self):
-        self.boardHash = str(str.board.reshape(3*3))
+        self.boardHash = str(self.board.reshape(3*3))
         return self.boardHash
 
     def availablePositions(self):
@@ -67,7 +67,7 @@ class TicTacToe:
         self.pSymbol = 1
 
     def giveReward(self):
-        result = self.getWinnerI()
+        result = self.getWinner()
         if result==1:
             self.p1.feedReward(1)
             self.p2.feedReward(0)
